@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 
-app.get('/api/customers', (req, res) => {
-	const customers = [
+app.get('/api/users', (req, res) => {
+	const users = [
 		{id:1, username:'DKSchrute'},
 		{id:2, username:'MGScott'}
 	];
 
-	res.json(customers);
+	res.json(users);
 });
 
 //Set port for where to run server
