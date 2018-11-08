@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Customer from './Customer';
+import User from './User';
 
 class App extends Component {
 
 	render() {
 		return (
 			<div>
-				<Customer />
+				<User />
 			</div>
 		)
 	}
