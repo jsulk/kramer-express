@@ -11,6 +11,7 @@ class App extends Component {
         this.state = {
             isLoaded: false,
             allSelected: true,
+            users: []
         };
         this.onFetchPosts = this.onFetchPosts.bind(this);
         this.onLike = this.onLike.bind(this);
@@ -32,6 +33,9 @@ class App extends Component {
                     isLoaded: true,
                 })
             });
+            fetch('/api/users')
+	 			.then(res => res.json())
+	 			.then(users => this.setState({users}));
     }
 
     onLike(id, liked) {
@@ -51,7 +55,7 @@ class App extends Component {
     }
 
     render() {
-
+    	
         const {isLoaded, allSelected} = this.state;
 
         //check the state of the all/liked filter and filter/map posts accordingly
@@ -80,7 +84,9 @@ class App extends Component {
                         <div style={headerStyle}>
                             <h1 className="ui header">Top posts from r/pics</h1>
                         </div>
-                        <p1 style={detailStyle}>(was originally 'r/surfing', but there was questionable content)</p1>
+                        <div style={detailStyle}>
+                       		(was originally 'r/surfing', but there was questionable content)
+                       	</div>
                         <div style={detailStyle}>
                             <Button active={this.state.allSelected} onClick={this.filterAll}
                                     attached='left'>All</Button>

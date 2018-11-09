@@ -66,8 +66,3 @@ class Post extends Component {
 
 export default Post;
 
-	// componentDidMount(){
-	// 	fetch('/api/users')
-	// 		.then(res => res.json())
-	// 		.then(users => this.setState({users}));
-	// }
