@@ -6,7 +6,7 @@ Clone project and run the following
 
 npm install
 
-npm client-install
+npm run client-install
 
 Start client and server concurrently:
 
