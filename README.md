@@ -1,4 +1,4 @@
-# react-express-boilerplate
+# kramer-express
 Boilerplate for an Express & React application designed to make implementation of Webpack easier
 
 Project Setup:
